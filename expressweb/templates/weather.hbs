@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="new.css"> -->
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#parent{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2022/06/15/18/29/landscape-7264427_1280.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+.child{
+    width: 25%;
+    /* height: 75vh; */
+    position: absolute;
+    background-color: rgb(0,0,0,0.05);
+    /* margin: auto; */
+    left: 500px;
+    top: 75px;
+    color: whitesmoke;
+    border: 1px solid rgb(0,0,0,0.05);
+    box-shadow: 2px 4px 0px 10px rgb(0,0,0,0.09);
+
+}
+.child h2{
+    text-align: center;
+    padding-top: 5px;
+}
+.child p{
+    /* display: block; */
+    padding-top:20px ;
+}
+.weather{
+    text-align: center;
+    padding-top:30px ;
+
+}
+.weather h3{
+    font-size: 3em;
+}
+@media screen and (max-width: 800px) {
+    #parent{
+        width: 100%;
+
+    }
+    .child{
+        width: 50%;
+        left:150px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .child{
+        width: 50%;
+        left:50px;
+        top: 30px;
+    }
+}
+@media screen and (max-width:310px) {
+    .child{
+        top:0px
+    }
+}
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.abc{
+    display: none;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="parent">
+        <div class="input-group">
+  <input type="search" id="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" class="btn btn-outline-primary" id="subbtn">search</button>
+</div>
+        <div class="child">
+            <h2 id="head">Weather Updates</h2>
+            <div class="hide">
+            <p id="date">Date</p><br>
+            <p id="time">Time</p>
+            <div class="weather">
+                <h3 id="weather">Weather</h3>
+                <p id="min-max">Min-Temp:||Max-Temp:</p><br>
+                <p id="country">Country:</p><br> 
+                <p id="city">City:</p>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js">
+ 
+
+
+    </script>
+</body>
+</html>
